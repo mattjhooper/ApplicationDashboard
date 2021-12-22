@@ -1,7 +1,7 @@
 ﻿<FullScreenWrapper FullScreen="@fullScreen">
     <div class="card">
         <div class="@HeadingClass card-header d-flex justify-content-between align-items-center">
-           @Heading <button class="btn btn-light" @onclick="ToggleFullScreen">@ToggleFullScreenText</button>
+           @Heading <button class="btn btn-light" @onclick="ToggleFullScreen"><span class=@ToggleFullScreenIcon title="toggle fullscreen" aria-hidden="true" /></button>
         </div>
         <div class="card-body">
             @ChildContent
@@ -22,7 +22,7 @@
 
     private bool fullScreen { get; set; }
 
-    public string ToggleFullScreenText => fullScreen ? "-" : "+";
+    public string ToggleFullScreenIcon => fullScreen ? "oi oi-fullscreen-exit" : "oi oi-fullscreen-enter";
 
     private void ToggleFullScreen()
     {
