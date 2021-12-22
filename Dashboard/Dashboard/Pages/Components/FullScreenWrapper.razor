@@ -1,0 +1,21 @@
+﻿@if (FullScreen)
+{
+    <div class="full-screen">
+        <div class="inner">
+            @ChildContent
+        </div>
+    </div>
+}
+else
+{
+    @ChildContent
+}
+
+@code
+{
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public bool FullScreen { get; set; }
+}

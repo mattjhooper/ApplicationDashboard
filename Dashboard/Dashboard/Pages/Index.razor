@@ -2,35 +2,20 @@
 
 <div class="row row-cols-3 g-4">
     <div class="col">
-        <div class="card">
-            <div class="card-header">
-                Counter
-            </div>
-            <div class="card-body">
-                <Counter />
-            </div>
-        </div>
+        <Panel heading="Counter" headingClass="text-white bg-info">
+            <Counter />
+        </Panel>
     </div>
     <div class="col">
-        <div class="card">
-            <div class="card-header">
-                How are you finding Blazor?
-            </div>
-            <div class="card-body">
-                <p>We want your feedback!</p>
-                <SurveyPrompt />
-            </div>
-        </div>
+        <Panel heading="How are you finding Blazor?">
+            <p>We want your feedback!</p>
+            <SurveyPrompt />
+        </Panel>
     </div>
 
     <div class="col-12">
-        <div class="card">
-            <div class="card-header">
-                Weather
-            </div>
-            <div class="card-body">
-                <FetchData />
-            </div>
-        </div>
+        <ImportantPanel heading="Weather">
+            <FetchData />
+        </ImportantPanel >
     </div>
 </div>
